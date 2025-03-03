@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - GitHub Portfolio</title>
+    <style>
+        :root {
+            --primary: #2F80ED;  /* 科技蓝主色 */
+            --bg: #F8F9FA;       /* 浅灰背景 */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--bg);
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="your-avatar.jpg" alt="Avatar" class="avatar">
+        <h1>Your Name</h1>
+        <p>Full Stack Developer | Open Source Contributor</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <!-- 添加更多社交链接 -->
+        </div>
+    </header>
+
+    <section class="projects-grid">
+        <article class="project-card">
+            <h3>Project 1</h3>
+            <p>项目描述文字，简要说明技术栈和实现功能</p>
+            <a href="#">View on GitHub →</a>
+        </article>
+        <!-- 重复项目卡片 -->
+    </section>
+
+    <!-- 技能图表部分 -->
+    <section class="skills-section">
+        <h2>技术栈</h2>
+        <div class="skill-bars">
+            <div class="bar" data-skill="Python" data-level="90%"></div>
+            <!-- 添加更多技能条 -->
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script>
+        // 技能条动画
+        document.querySelectorAll('.bar').forEach(bar => {
+            const level = bar.dataset.level;
+            bar.style.width = level;
+            bar.innerHTML = `${bar.dataset.skill} ${level}`;
+        });
+    </script>
+</body>
+</html>
